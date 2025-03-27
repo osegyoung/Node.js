@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 단건 -->
+  <form name="singleForm">
+    <input type="file" name="avatar">
+    <button type="button">단건 등록</button>
+  </form>
+  <script>
+    singleForm.querySelector('button')
+              .addEventListener('click', function(event){
+                //multipart/form-data = ajax를 사용해서 인코딩 타입을  FromData로 설정함
+                let formData = new FormData(singleForm);
+
+                  fetch('http://localhost:5000/profile', {
+                    method : 'post',
+                    body : formData,
+                  })
+                  .then(res => res.json())
+                  .then(result => {
+                    console.log(result);
+                  })
+                  .catch(err => console.log(err));
+              });
+  </script>
+  <!--multiple-->
+  <input type="file" multiple>
+  <button type="button" id="upBtn">멀티 등록</button>
+  <script>
+    document.querySelector('#upBtn')
+            .addEventListener('click', function(event){
+              let inputTag = event.currentTarget.previousElementSibling;
+              let fileList = inputTag.files;
+
+              let formData = new FormData();
+              for(let file of fileList){
+                formData.append('photos', file); //FormData에 추가할댄 'append' Method 를 사용함 그리고 어떤 키를 쓸건지 ( 키 , 밸류) 넣어주면됨  
+              }            
+            fetch('http://localhost:5000/photos', {
+                    method : 'post',
+                    body : formData,
+                  })
+                  .then(res => {
+                    let status = res.status;
+                    console.log(res.status);
+                  })
+                  .catch(err => console.log(err));
+              });
+  </script>
+</body>
+</html>
