@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/node.js-#5FA04E?style=flat-square&logo=node.js&logoColor=black"/>
+<img src="https://img.shields.io/badge/node.js-#5FA04E?style=flat-square&logo=html5&logoColor=black"/>
 <p align='center'>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62"/>
 </p>
