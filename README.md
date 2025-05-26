@@ -8,10 +8,6 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Node.js%20Project&fontSize=80&animation=fadeIn&fontAlignY=38&desc=Awesome%20Node.js%20Backend%20Service&descAlignY=51&descAlign=62"/>
 </p>
 
-<!-- 타이핑 효과 -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Express+REST+API+Ready!;Node.js+is+Fun+💚;Fast,+Reliable,+Scalable.;Happy+Coding!&font=Fira%20Code&center=true&width=440&height=45&duration=4000&pause=1000" alt="Typing SVG">
-</p>
 
 ---
 
